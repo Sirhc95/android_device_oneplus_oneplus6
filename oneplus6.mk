@@ -77,6 +77,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     pa.biometrics.fingerprint.inscreen@1.0-service.oneplus_oneplus6
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gf_input.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/gf_input.idc \
