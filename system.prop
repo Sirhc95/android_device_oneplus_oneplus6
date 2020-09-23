@@ -306,6 +306,9 @@ persist.vendor.ims.disableADBLogs=1
 
 # PA properties
 
+# BPF
+ro.kernel.ebpf.supported=true
+
 # Graphics
 persist.vendor.color.matrix=2
 debug.sf.early_phase_offset_ns=500000
