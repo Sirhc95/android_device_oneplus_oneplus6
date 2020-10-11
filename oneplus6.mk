@@ -58,6 +58,10 @@ PRODUCT_PACKAGES += \
     libbluetooth_qti \
     libbt-logClient.so
 
+# Camera
+PRODUCT_PACKAGES += \
+    libcvface_api
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
