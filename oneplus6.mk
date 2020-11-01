@@ -145,9 +145,6 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := $(PRODUCT_TARGET_VNDK_VERSION)
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcutils-v29.so
 
 # Wi-Fi
 PRODUCT_COPY_FILES += \
