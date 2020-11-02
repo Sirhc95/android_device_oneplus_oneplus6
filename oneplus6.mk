@@ -123,7 +123,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    TriStateHandler \
     tri-state-key_daemon
 
 # Update engine
