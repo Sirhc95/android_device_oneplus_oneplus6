@@ -76,6 +76,9 @@ void vendor_load_properties()
 		property_override("ro.system.build.fingerprint", "OnePlus/OnePlus6T/OnePlus6T:10/QKQ1.190716.003/1910270420:user/release-keys");
 	}
 
+    // Adb Secure
+    property_override("ro.adb.secure", "0");
+
 	// Common Properties
 
 	// Dalvik
