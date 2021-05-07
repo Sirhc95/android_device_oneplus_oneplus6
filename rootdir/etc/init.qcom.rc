@@ -40,3 +40,6 @@ service dashd /system/bin/dashd
 
 service cvphalservice /system/bin/true
     disabled
+
+on property:ro.boot.rf_version=*
+    setprop vendor.rf.version ${ro.boot.rf_version}
