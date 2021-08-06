@@ -306,6 +306,9 @@ persist.vendor.ims.disableADBLogs=1
 
 # PA properties
 
+# AB Update
+ro.build.ab_update=true
+
 # BPF
 ro.kernel.ebpf.supported=true
 
