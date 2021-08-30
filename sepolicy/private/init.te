@@ -1,1 +1,4 @@
 allow init sysfs_display:file create_file_perms;
+
+# Allow init to mount vendor overlays
+allow init vendor_overlay_file:dir mounton;
