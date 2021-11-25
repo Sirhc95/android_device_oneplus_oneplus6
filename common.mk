@@ -402,6 +402,18 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2 \
     android.hardware.power@1.2.vendor
 
+# Prebuilts
+PRODUCT_PACKAGES += \
+    OnePlusCamera \
+    OnePlusGallery \
+    OnePlusCameraService
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem-system.xml:system/etc/permissions/privapp-permissions-oem.xml \
+    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem-product.xml:system/product/etc/permissions/privapp-permissions-oem.xml \
+    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem-system_ext.xml:system/system_ext/etc/permissions/privapp-permissions-oem.xml \
+    $(LOCAL_PATH)/prebuilts/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml:system/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml
+
 # Pixel Offline charger
 PRODUCT_PACKAGES += \
     charger_res_images \
