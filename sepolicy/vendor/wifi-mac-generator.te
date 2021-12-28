@@ -1,2 +1,0 @@
-type wifi-mac-generator, domain;
-allow wifi-mac-generator persist_wlan_file:file rw_file_perms;
