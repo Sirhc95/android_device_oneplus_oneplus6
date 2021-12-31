@@ -95,6 +95,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_sdm845
 
+PRODUCT_PACKAGES += \
+    libavservices_minijail
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2 \
@@ -137,8 +140,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 29
-PRODUCT_EXTRA_VNDK_VERSIONS := $(PRODUCT_TARGET_VNDK_VERSION)
+PRODUCT_TARGET_VNDK_VERSION := 30
+PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # Wi-Fi
 PRODUCT_COPY_FILES += \
