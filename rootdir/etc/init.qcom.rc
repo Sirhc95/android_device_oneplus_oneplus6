@@ -38,3 +38,6 @@ service cvphalservice /system/bin/true
 
 on property:ro.boot.rf_version=*
     setprop vendor.rf.version ${ro.boot.rf_version}
+
+on boot && property:persist.sys.usb.config=*
+    setprop sys.usb.config ${persist.sys.usb.config}
