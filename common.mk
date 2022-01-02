@@ -597,5 +597,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
 
+# Updater
+PRODUCT_PACKAGES += \
+    Updater
+
 # Vendor security patch level
 VENDOR_SECURITY_PATCH = 2021-10-01
