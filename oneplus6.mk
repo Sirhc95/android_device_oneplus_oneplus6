@@ -408,10 +408,13 @@ PRODUCT_PACKAGES += \
 
 # Update engine
 PRODUCT_PACKAGES += \
-    bootctrl.sdm845.recovery \
     update_engine \
     update_engine_sideload \
     update_verifier
+
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
