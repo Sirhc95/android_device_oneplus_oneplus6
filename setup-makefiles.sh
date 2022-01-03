@@ -29,9 +29,9 @@ INITIAL_COPYRIGHT_YEAR=2018
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-SYBERIA_ROOT="$MY_DIR"/../../..
+ROOT="$MY_DIR"/../../..
 
-HELPER="$SYBERIA_ROOT"/vendor/syberia/build/tools/extract_utils.sh
+HELPER="$ROOT"/vendor/aospa/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -39,7 +39,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$SYBERIA_ROOT" true
+setup_vendor "$DEVICE" "$VENDOR" "$ROOT" true
 
 # Copyright headers and guards
 write_headers "oneplus6"

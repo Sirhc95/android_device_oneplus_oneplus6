@@ -1,3 +1,0 @@
-allow cdsprpcd xdsp_device:chr_file r_file_perms;
-allow cdsprpcd public_adsprpcd_file:file r_file_perms;
-

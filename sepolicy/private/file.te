@@ -1,0 +1,6 @@
+# proc
+type proc_touchpanel, fs_type, proc_type;
+
+# sysfs
+type sysfs_display, sysfs_type, fs_type;
+type sysfs_oem, sysfs_type, fs_type;

@@ -16,16 +16,13 @@
 
 BOARD_VENDOR := oneplus
 
-VENDOR_PATH := device/oneplus/oneplus6
+DEVICE_PATH := device/oneplus/oneplus6
 ANDROID_TOP := $(shell pwd)
-
-# Compile libhwui in performance mode
-HWUI_COMPILE_FOR_PERF := true
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
-TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_DUP_RULES := true
@@ -55,7 +52,7 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm845
 TARGET_NO_BOOTLOADER := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 BOARD_HAVE_BLUETOOTH_QCOM := true
 TARGET_USE_QTI_BT_STACK := true
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
@@ -83,7 +80,7 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 11
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/sdm845
-TARGET_KERNEL_CONFIG := syberia_defconfig
+TARGET_KERNEL_CONFIG := oneplus6_defconfig
 KERNEL_TOOLCHAIN := $(ANDROID_TOP)/prebuilts/clang/host/linux-x86/clang-11/bin
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-gnu-
 
@@ -99,11 +96,11 @@ TARGET_BOARD_PLATFORM := sdm845
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-TARGET_ODM_PROP += $(VENDOR_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(VENDOR_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
-TARGET_SYSTEM_EXT_PROP += $(VENDOR_PATH)/system_ext.prop
-TARGET_VENDOR_PROP += $(VENDOR_PATH)/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Telephony
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
@@ -156,11 +153,11 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -181,32 +178,24 @@ ENABLE_VENDOR_RIL_SERVICE := true
 
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
-TARGET_NO_RECOVERY := true
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPPRESS_EMMC_WIPE := true
-TARGET_PREBUILT_RECOVERY_RAMDISK := $(VENDOR_PATH)/ramdisk-recovery.zip
 
-# Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
-
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/private
-BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(VENDOR_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel
+    $(DEVICE_PATH)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(VENDOR_PATH):libinit_oneplus6
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_oneplus6
 TARGET_RECOVERY_DEVICE_MODULES := libinit_oneplus6
 
 # WiFi
