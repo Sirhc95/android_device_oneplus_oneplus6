@@ -85,6 +85,10 @@ TARGET_KERNEL_CONFIG := oneplus6_defconfig
 KERNEL_TOOLCHAIN := $(ANDROID_TOP)/prebuilts/clang/host/linux-x86/clang-11/bin
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-gnu-
 
+# Disable path restrictions
+BUILD_BROKEN_NINJA_USES_ENV_VARS += TEMPORARY_DISABLE_PATH_RESTRICTIONS
+TEMPORARY_DISABLE_PATH_RESTRICTIONS=true
+
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
