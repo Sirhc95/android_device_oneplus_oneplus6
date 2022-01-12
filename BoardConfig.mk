@@ -65,6 +65,10 @@ BOARD_VNDK_VERSION := current
 # Bluetooth
 TARGET_USE_QTI_BT_STACK := true
 
+# Broken flags
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Display
 TARGET_USES_HWC2 := true
 
