@@ -18,7 +18,8 @@
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/oneplus/oneplus6/oneplus6-vendor.mk)
+$(call inherit-product, vendor/oneplus/oneplus6t/oneplus6t-vendor.mk)
+$(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 
 # Product API
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
