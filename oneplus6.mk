@@ -115,6 +115,12 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     audio.bluetooth.default
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti:64 \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
+
 # Camera
 PRODUCT_PACKAGES += \
     libcvface_api \
@@ -464,10 +470,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
