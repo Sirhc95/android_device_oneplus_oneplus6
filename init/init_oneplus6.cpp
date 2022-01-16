@@ -78,15 +78,4 @@ void vendor_load_properties()
 
     // Adb Secure
     property_override("ro.adb.secure", "0");
-
-	// Common Properties
-
-	// Dalvik
-	property_override_dual("dalvik.vm.heapstartsize", "dalvik.vm.heapstartsize", "16m");
-	property_override_dual("dalvik.vm.heapgrowthlimit", "dalvik.vm.heapgrowthlimit", "256m");
-	property_override_dual("dalvik.vm.heapsize", "dalvik.vm.heapsize", "512m");
-	property_override_dual("dalvik.vm.heaptargetutilization", "dalvik.vm.heaptargetutilization", "0.5");
-	property_override_dual("dalvik.vm.heapminfree", "dalvik.vm.heapminfree", "8m");
-	property_override_dual("dalvik.vm.heapmaxfree", "dalvik.vm.heapmaxfree", "32m");
-
 }
