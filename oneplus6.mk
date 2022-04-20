@@ -20,7 +20,11 @@ OVERRIDE_TARGET_FLATTEN_APEX := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/oneplus/oneplus6/oneplus6-vendor.mk)
+#$(call inherit-product-if-exists, vendor/oneplus/oneplus6/oneplus6-vendor.mk)
+
+# Workaround: Get Oneplus 6T specific vendor blobs and common blobs only until tree is commonized
+$(call inherit-product-if-exists, vendor/oneplus/oneplus6t/oneplus6t-vendor.mk)
+$(call inherit-product-if-exists, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 
 # Board
 TARGET_BOARD_PLATFORM := sdm845
