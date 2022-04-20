@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.android.wifi.resources.oneplus6series"
+        android:versionCode="1"
+        android:versionName="1.0">
+		<application android:hasCode="false" />
+        <overlay android:targetPackage="com.android.wifi.resources"
+        android:targetName="WifiCustomization"
+		android:priority="0"
+		android:isStatic="true" />
+</manifest>
